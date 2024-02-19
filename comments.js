@@ -1,13 +1,12 @@
-// Create web Server
 const http = require('http');
+
 const server = http.createServer((req, res) => {
-     // handle requests here
      res.statusCode = 200;
      res.setHeader('Content-Type', 'text/plain');
-     res.end('Hello, World!');
-
+     res.end('Hello World\n');
 });
 
-server.listen(3000, () => {
-     console.log('Server is running on port 3000');
+server.listen(3000, '127.0.0.1', () => {
+     console.log('Server running at http://127.0.0.1:3000/');
 });
+
